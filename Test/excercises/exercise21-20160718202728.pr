@@ -1,0 +1,18 @@
+include("platform:/plugin/nl.cwi.pr/src/nl/cwi/pr/autom/libr/Reo.pr")
+
+Exercise21(A;B) = 
+	XNode([p3];[p1,p2]) // Name: Z3
+	mult Node([A];[p4]) // Name: A
+	mult Node([p6];[p5]) // Name: Z1
+	mult Node([p9];[p7,p8]) // Name: Z2
+	mult Node([p10];[B]) // Name: B
+	mult SyncDrain(p5,p7;)
+	mult Sync(p1;p9)
+	mult Sync(p8;p10)
+	mult Sync(p4;p3)
+	mult FifoFull<'0'>(p2;p6)
+
+main =
+		Exercise21(A;B)
+
+

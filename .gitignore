@@ -1,0 +1,6 @@
+.metadata/
+.recommenders/
+WebTest/.settings/
+Test/src/nl/cwi/pr/runtime/examples/.DS_Store
+Test/src/nl/cwi/pr/.DS_Store
+*.DS_Store

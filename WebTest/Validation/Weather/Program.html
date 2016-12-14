@@ -1,0 +1,230 @@
+
+
+<html>
+	<head>
+
+		<script src="/pr/runtime_core.js"></script>
+		<script src="/pr/runtime_api.js"></script>
+
+		<script src="/processes/jquery.js"></script>
+		<script src="/protocols/CurrentWeather.js"></script>
+		<script src="/processes/navigator.js"></script>
+
+		<script src="Protocol_d20161214_t173653_998_CurrentWeather.js"></script>
+
+		<script src="WorkerClient_d20161214_t173654_039_GetCurrentPosition.js"></script>
+		<script src="WorkerClient_d20161214_t173654_046_Get.js"></script>
+
+		<script src="Main_Weather_20161214173653.js"></script>
+
+		<script type="text/javascript">
+
+		var main = new Main_Weather_20161214173653();
+
+		function putValue(portName) {
+			var port = main[portName];
+			var input = document.getElementById('input' + portName);
+
+		    port.put(input.value).then((data) => {
+		        input.value = '';
+		    });
+		}
+
+		function getValue(portName) {
+		 	var port = main[portName];
+			var input = document.getElementById('output' + portName);
+
+		    port.get().then((data) => {
+		        input.value = data;
+		    });
+		}
+
+		function stringify(value)
+		{
+			return JSON.stringify(value);
+		}
+
+	
+		main.input$1.addListener("putting", (port, data) => {
+			var log = document.getElementById('loginput$1');
+			if (log) {
+				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
+			}
+		});	
+		main.input$1.addListener("putted", (port, data) => {
+			var log = document.getElementById('loginput$1');
+			if (log) {
+		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
+		    }
+		});
+
+	
+		main.p13$1.addListener("putting", (port, data) => {
+			var log = document.getElementById('logp13$1');
+			if (log) {
+				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
+			}
+		});	
+		main.p13$1.addListener("putted", (port, data) => {
+			var log = document.getElementById('logp13$1');
+			if (log) {
+		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
+		    }
+		});
+
+	
+		main.p7$1.addListener("putting", (port, data) => {
+			var log = document.getElementById('logp7$1');
+			if (log) {
+				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
+			}
+		});	
+		main.p7$1.addListener("putted", (port, data) => {
+			var log = document.getElementById('logp7$1');
+			if (log) {
+		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
+		    }
+		});
+
+
+		
+		main.output$1.addListener("getting", (port) => {
+			var log = document.getElementById('logoutput$1');
+			if (log) {
+				log.innerHTML += '<BR />getting ' + port.name;
+			}
+		});	
+		main.output$1.addListener("getted", (port, data) => {
+			var log = document.getElementById('logoutput$1');
+			if (log) {
+		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
+		    }
+		});		
+
+		
+		main.p3$1.addListener("getting", (port) => {
+			var log = document.getElementById('logp3$1');
+			if (log) {
+				log.innerHTML += '<BR />getting ' + port.name;
+			}
+		});	
+		main.p3$1.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp3$1');
+			if (log) {
+		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
+		    }
+		});		
+
+		
+		main.p9$1.addListener("getting", (port) => {
+			var log = document.getElementById('logp9$1');
+			if (log) {
+				log.innerHTML += '<BR />getting ' + port.name;
+			}
+		});	
+		main.p9$1.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp9$1');
+			if (log) {
+		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
+		    }
+		});		
+
+
+		</script>
+
+		<style>
+			.portBoxes {
+				vertical-align:top;
+			}
+			.portBox {
+				vertical-align:top;
+				display: inline-block;
+				width: 350px;
+				padding: 5px;
+				margin: 5px;
+    			border: 2px solid black;
+			}
+
+			.portBox .portName {
+				font-weight: bold;
+			}
+
+			.portBox .portLogTitle {
+				font-weight: bold;
+				margin-top: 5px;
+				display: block;
+			}
+
+			.portBox .portLog {
+				font-family: monospace;
+				overflow-y:auto;
+				width: 100%;
+				height: 250px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		
+	<div class="portBox" >
+        <span class="portName">input$1</span>
+        <input type="text" id="inputinput$1" />
+        <button onclick="putValue('input$1')">Put</button>
+        <span class="portLogTitle">Log of port input$1:</span>
+        <div id="loginput$1" class="portLog"></div>
+    </div>
+
+		
+	<div class="portBox" >
+        <span class="portName">p13$1</span>
+        <input type="text" id="inputp13$1" />
+        <button onclick="putValue('p13$1')">Put</button>
+        <span class="portLogTitle">Log of port p13$1:</span>
+        <div id="logp13$1" class="portLog"></div>
+    </div>
+
+		
+	<div class="portBox" >
+        <span class="portName">p7$1</span>
+        <input type="text" id="inputp7$1" />
+        <button onclick="putValue('p7$1')">Put</button>
+        <span class="portLogTitle">Log of port p7$1:</span>
+        <div id="logp7$1" class="portLog"></div>
+    </div>
+
+
+		
+	<div class="portBox">
+        <span class="portName">output$1</span>
+    	<input type="text" id="outputoutput$1" />
+        <button onclick="getValue('output$1')">Get</button>
+        <span class="portLogTitle">Log of port output$1:</span>
+        <div id="logoutput$1" class="portLog"></div>
+     </div>
+
+		
+	<div class="portBox">
+        <span class="portName">p3$1</span>
+    	<input type="text" id="outputp3$1" />
+        <button onclick="getValue('p3$1')">Get</button>
+        <span class="portLogTitle">Log of port p3$1:</span>
+        <div id="logp3$1" class="portLog"></div>
+     </div>
+
+		
+	<div class="portBox">
+        <span class="portName">p9$1</span>
+    	<input type="text" id="outputp9$1" />
+        <button onclick="getValue('p9$1')">Get</button>
+        <span class="portLogTitle">Log of port p9$1:</span>
+        <div id="logp9$1" class="portLog"></div>
+     </div>
+
+
+		<script type="text/javascript">
+			main.start();
+		</script>
+
+	</body>
+</html>

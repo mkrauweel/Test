@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script src="/pr/runtime_core.js"></script>
+		<script src="/pr/runtime_api.js"></script>
+		<script src="/processes/jquery.js"></script>
+		
+		<script src="/protocols/CurrentWeather.js"></script>
+	
+		<script src="Protocol_d20161214_t173653_998_CurrentWeather.js"></script>
+
+		<script src="WorkerClient_d20161214_t173654_039_GetCurrentPosition.js"></script>
+		<script src="WorkerClient_d20161214_t173654_046_Get.js"></script>
+
+		<script src="Main_Weather_20161214173653.js"></script>
+		
+		<script type="text/javascript">
+			var main = new Main_Weather_20161214173653();
+			main.start();
+			
+			main.input$1.put('');
+			main.output$1.get().then(showWeather);
+			
+			function showWeather(jsonData)
+			{
+				$("#weatherName").html(jsonData.place);
+				$("#weatherTemp").html(jsonData.temp + " degrees");
+				$("#weatherIcon").attr("src", "http://openweathermap.org/img/w/" + jsonData.icon + ".png");
+			}	
+		</script>
+	</head>
+	<body>	
+		<div id="weather">
+			<h1 id="weatherName"></h1>
+			<h2>
+				<img id="weatherIcon" />
+				<span id="weatherTemp"></span>
+			</h2>
+		</div>
+	</body>
+</html>

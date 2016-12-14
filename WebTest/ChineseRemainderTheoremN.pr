@@ -1,0 +1,38 @@
+include("platform:/plugin/nl.cwi.pr/src/nl/cwi/pr/autom/libr/Reo.pr")
+
+ChineseRemainderTheorem(power,p2,p6p13[],p17;result,p3p10[],p14,p21) = 
+		
+	Node([power];[p1]) // Name: power
+	mult Node([p2];[result]) // Name: result
+	
+	mult prod i:1..#p3p10 {
+		Node([p4p11[i]];[p3p10[i]]) // Name: power[1..N]In
+		mult Sync(p7p8[i];p4p11[i])
+	}
+	
+	mult prod i:1..#p6p13 {
+		Node([p6p13[i]];[p5p12[i]]) // Name: power[1..N]Out
+		mult Sync(p5p12[i];p19p20[i])
+	}
+		
+	mult XNode([p9];p7p8[1..#p3p10]) // Name: dividePayload
+		
+	mult Node([p15];[p14]) // Name: payloadIn
+	mult Node([p17];[p16]) // Name: payloadOut
+	
+	mult Node(p19p20[1..#p6p13];[p18]) // Name: mergePayload
+	mult Node([p22];[p21]) // Name: mergeIn
+	mult Sync(p1;p15)
+	mult Sync(p16;p9)
+	mult Sync(p18;p22)
+	
+N = 24
+	
+main =
+		ChineseRemainderTheorem(power,p2,p6p13[1..N],p17;result,p3p10[1..N],p14,p21)
+	among
+		forall i:1..N ChineseRemainderTheorem.Power@/processes/ChineseRemainderTheorem.js(p3p10[i],p6p13[i],i) // Name: Power0
+		and generator:ChineseRemainderTheorem.GetPayload(p14,p17,'2','97777',N) // Name: GetPayload
+		and generator:ChineseRemainderTheorem.MergePayload(p21,p2,N) // Name: MergePayload
+
+
