@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:channels="http://www.cwi.nl/reo/channels" xmlns:components="http://www.cwi.nl/reo/components" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:reo="http://www.cwi.nl/reo" xsi:schemaLocation="http://www.cwi.nl/reo/channels http://www.cwi.nl/reo#//channels http://www.cwi.nl/reo/components http://www.cwi.nl/reo#//components">
   <reo:Module xmi:id="_XGt5wEeXEeav3ajArVIQXw">
-    <connectors xmi:type="reo:Connector" xmi:id="_YEnFYEeXEeav3ajArVIQXw" name="ChineseRemainderTheorem">
+    <connectors xmi:type="reo:Connector" xmi:id="_YEnFYEeXEeav3ajArVIQXw" name="MapReduce">
       <properties xmi:type="reo:Property" xmi:id="_qORhwEhNEeaqk4teiLeetQ" key="ip" value="127.0.0.1"/>
       <nodes xmi:type="reo:Node" xmi:id="_csZI0EeXEeav3ajArVIQXw" name="power" sourceEnds="_6THEkk5yEeaCYLad4_Rgqg"/>
       <nodes xmi:type="reo:Node" xmi:id="_d2UlUEeXEeav3ajArVIQXw" name="result" sinkEnds="_mv9pgE58EeaCYLad4_Rgqg"/>
-      <nodes xmi:type="reo:Node" xmi:id="_giLuoEeXEeav3ajArVIQXw" name="power0In" sourceEnds="_v16XYEeXEeav3ajArVIQXw" sinkEnds="_CE9uorGMEeaJe50J5X0xaA"/>
-      <nodes xmi:type="reo:Node" xmi:id="_icXjYEeXEeav3ajArVIQXw" name="power0Out" sourceEnds="_vZtGgk58EeaCYLad4_Rgqg" sinkEnds="_yquoYEeXEeav3ajArVIQXw"/>
+      <nodes xmi:type="reo:Node" xmi:id="_giLuoEeXEeav3ajArVIQXw" name="compute0In" sourceEnds="_v16XYEeXEeav3ajArVIQXw" sinkEnds="_CE9uorGMEeaJe50J5X0xaA"/>
+      <nodes xmi:type="reo:Node" xmi:id="_icXjYEeXEeav3ajArVIQXw" name="compute0Out" sourceEnds="_vZtGgk58EeaCYLad4_Rgqg" sinkEnds="_yquoYEeXEeav3ajArVIQXw"/>
       <nodes xmi:type="reo:Node" xmi:id="_5a-pkEhaEea4qvBHy2LuNw" name="dividePayload" sourceEnds="_rj9AIk6AEeaCYLad4_Rgqg _CE9uoLGMEeaJe50J5X0xaA" sinkEnds="_4e8Q5E51EeaCYLad4_Rgqg" type="route"/>
-      <nodes xmi:type="reo:Node" xmi:id="_9pq3kEhaEea4qvBHy2LuNw" name="power1In" sourceEnds="_D1jyEEhbEea4qvBHy2LuNw" sinkEnds="_rj9AJE6AEeaCYLad4_Rgqg"/>
-      <nodes xmi:type="reo:Node" xmi:id="_OJPoYEhbEea4qvBHy2LuNw" name="power1Out" sourceEnds="_wCwDgk58EeaCYLad4_Rgqg" sinkEnds="_FJQOkEhbEea4qvBHy2LuNw"/>
+      <nodes xmi:type="reo:Node" xmi:id="_9pq3kEhaEea4qvBHy2LuNw" name="compute1In" sourceEnds="_D1jyEEhbEea4qvBHy2LuNw" sinkEnds="_rj9AJE6AEeaCYLad4_Rgqg"/>
+      <nodes xmi:type="reo:Node" xmi:id="_OJPoYEhbEea4qvBHy2LuNw" name="compute1Out" sourceEnds="_wCwDgk58EeaCYLad4_Rgqg" sinkEnds="_FJQOkEhbEea4qvBHy2LuNw"/>
       <nodes xmi:type="reo:Node" xmi:id="_52ahgE5yEeaCYLad4_Rgqg" name="payloadIn" sourceEnds="_2ANsAE5yEeaCYLad4_Rgqg" sinkEnds="_6THElE5yEeaCYLad4_Rgqg"/>
       <nodes xmi:type="reo:Node" xmi:id="_-XpRAE5yEeaCYLad4_Rgqg" name="payloadOut" sourceEnds="_4e8Q4k51EeaCYLad4_Rgqg" sinkEnds="_9np-gE5yEeaCYLad4_Rgqg"/>
       <nodes xmi:type="reo:Node" xmi:id="_pIK3AE58EeaCYLad4_Rgqg" name="mergePayload" sourceEnds="_3A9Zgk6BEeaCYLad4_Rgqg" sinkEnds="_vZtGhE58EeaCYLad4_Rgqg _wCwDhE58EeaCYLad4_Rgqg"/>
@@ -43,17 +43,17 @@
         <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_CE9uorGMEeaJe50J5X0xaA" node="_giLuoEeXEeav3ajArVIQXw"/>
       </primitives>
     </connectors>
-    <components xmi:type="components:SourceCode" xmi:id="_mNRpMEeXEeav3ajArVIQXw" name="Power0" originialName="ChineseRemainderTheorem.Power@/processes/ChineseRemainderTheorem.js">
+    <components xmi:type="components:SourceCode" xmi:id="_mNRpMEeXEeav3ajArVIQXw" name="Compute0" originialName="ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js">
       <properties xmi:type="reo:Property" xmi:id="_ndLHkEhXEea4qvBHy2LuNw" key="index" value="0" type=""/>
       <sourceEnds xmi:type="reo:ParameterSourceEnd" xmi:id="_v16XYEeXEeav3ajArVIQXw" name="pIn" node="_giLuoEeXEeav3ajArVIQXw"/>
       <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_yquoYEeXEeav3ajArVIQXw" name="pOut" node="_icXjYEeXEeav3ajArVIQXw"/>
     </components>
-    <components xmi:type="components:SourceCode" xmi:id="_DTF-MEhbEea4qvBHy2LuNw" name="Power1" originialName="ChineseRemainderTheorem.Power@/processes/ChineseRemainderTheorem.js">
+    <components xmi:type="components:SourceCode" xmi:id="_DTF-MEhbEea4qvBHy2LuNw" name="Compute1" originialName="ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js">
       <properties xmi:type="reo:Property" xmi:id="_I0cG4EhbEea4qvBHy2LuNw" key="index" value="1"/>
       <sourceEnds xmi:type="reo:ParameterSourceEnd" xmi:id="_D1jyEEhbEea4qvBHy2LuNw" name="pIn" node="_9pq3kEhaEea4qvBHy2LuNw"/>
       <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_FJQOkEhbEea4qvBHy2LuNw" name="pOut" node="_OJPoYEhbEea4qvBHy2LuNw"/>
     </components>
-    <components xmi:type="components:SourceCode" xmi:id="_b3ZwEE5yEeaCYLad4_Rgqg" name="GetPayload" originialName="generator:ChineseRemainderTheorem.GetPayload">
+    <components xmi:type="components:SourceCode" xmi:id="_b3ZwEE5yEeaCYLad4_Rgqg" name="DividePayload" originialName="generator:ChineseRemainderTheorem.DividePayload">
       <properties xmi:type="reo:Property" xmi:id="_ei99cE59EeaCYLad4_Rgqg" key="base" value="2"/>
       <properties xmi:type="reo:Property" xmi:id="_gLL4cE59EeaCYLad4_Rgqg" key="modulo" value="97777"/>
       <properties xmi:type="reo:Property" xmi:id="_M0v9ALGKEeaJe50J5X0xaA" key="workersNumber" value="2" type=""/>
@@ -137,7 +137,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2QIZgU6BEeaCYLad4_Rgqg" x="26" y="235"/>
         </children>
       </children>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YEw2YUeXEeav3ajArVIQXw" x="267" y="96" width="460" height="335"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YEw2YUeXEeav3ajArVIQXw" x="232" y="12" width="511" height="357"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_mNRpMUeXEeav3ajArVIQXw" type="1004" element="_mNRpMEeXEeav3ajArVIQXw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_mNRpM0eXEeav3ajArVIQXw" type="4007"/>
@@ -160,7 +160,7 @@
         </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yquoYkeXEeav3ajArVIQXw" x="-7" y="93"/>
       </children>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mNRpMkeXEeav3ajArVIQXw" x="755" y="108" height="122"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mNRpMkeXEeav3ajArVIQXw" x="758" y="19" height="122"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_DTF-MUhbEea4qvBHy2LuNw" type="1004" element="_DTF-MEhbEea4qvBHy2LuNw" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_DTF-M0hbEea4qvBHy2LuNw" type="4007"/>
@@ -183,7 +183,7 @@
         </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FJQOkkhbEea4qvBHy2LuNw" x="-7" y="90"/>
       </children>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DTF-MkhbEea4qvBHy2LuNw" x="755" y="271" height="115"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DTF-MkhbEea4qvBHy2LuNw" x="763" y="190" height="115"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_b3czYE5yEeaCYLad4_Rgqg" type="1004" element="_b3ZwEE5yEeaCYLad4_Rgqg" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_b3dacE5yEeaCYLad4_Rgqg" type="4007"/>
@@ -212,7 +212,7 @@
         </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9nqlkU5yEeaCYLad4_Rgqg" x="153" y="72"/>
       </children>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b3czYU5yEeaCYLad4_Rgqg" x="57" y="157"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_b3czYU5yEeaCYLad4_Rgqg" x="48" y="73"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_lXzjwE58EeaCYLad4_Rgqg" type="1004" element="_lXxukE58EeaCYLad4_Rgqg" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_lXzjwk58EeaCYLad4_Rgqg" type="4007"/>
@@ -235,7 +235,7 @@
         </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mv9pgk58EeaCYLad4_Rgqg" x="153" y="67"/>
       </children>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lXzjwU58EeaCYLad4_Rgqg" x="57" y="325"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lXzjwU58EeaCYLad4_Rgqg" x="48" y="241"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_XG3qwUeXEeav3ajArVIQXw"/>
     <edges xmi:type="notation:Connector" xmi:id="_wvtGIEeXEeav3ajArVIQXw" type="3013" source="_giLuoUeXEeav3ajArVIQXw" target="_v16-cEeXEeav3ajArVIQXw">

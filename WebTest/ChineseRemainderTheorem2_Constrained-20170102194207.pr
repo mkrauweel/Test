@@ -1,0 +1,45 @@
+include("platform:/plugin/nl.cwi.pr/src/nl/cwi/pr/autom/libr/Reo.pr")
+
+MapReduce(power,p8,p16,p20,p40;result,p4,p12,p17,p24) = 
+	Node([power];[p1,p2]) // Name: power
+	mult Node([p3];[result]) // Name: result
+	mult Node([p6];[p4,p5]) // Name: compute0In
+	mult Node([p8];[p7]) // Name: compute0Out
+	mult XNode([p11];[p9,p10]) // Name: dividePayload
+	mult Node([p14];[p12,p13]) // Name: compute1In
+	mult Node([p16];[p15]) // Name: compute1Out
+	mult Node([p18];[p17]) // Name: payloadIn
+	mult Node([p20];[p19]) // Name: payloadOut
+	mult Node([p22,p23];[p21]) // Name: mergePayload
+	mult Node([p25];[p24]) // Name: mergeIn
+	mult Node([p28];[p26,p27]) // Name: constraint0
+	mult Node([p31];[p29,p30]) // Name: constraint1
+	mult Node([p34];[p32,p33]) // Name: constraintpower
+	mult Node([p37];[p35,p36]) // Name: constraint result
+	mult Node([p40];[p38,p39]) // Name: mergeOut
+	mult Sync(p1;p18)
+	mult Sync(p19;p11)
+	mult Sync(p7;p22)
+	mult Sync(p15;p23)
+	mult Sync(p9;p14)
+	mult Sync(p21;p25)
+	mult Sync(p10;p6)
+	mult SyncDrain(p26,p5;)
+	mult SyncDrain(p29,p13;)
+	mult Fifo(p27;p31)
+	mult Fifo(p30;p37)
+	mult FifoFull<'1'>(p35;p34)
+	mult Fifo(p32;p28)
+	mult SyncDrain(p2,p33;)
+	mult SyncDrain(p38,p36;)
+	mult Sync(p39;p3)
+
+main =
+		MapReduce(power,p8,p16,p20,p40;result,p4,p12,p17,p24)
+	among
+		ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js(p4,p8,'0') // Name: Compute0
+		and ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js(p12,p16,'1') // Name: Compute1
+		and generator:ChineseRemainderTheorem.DividePayload(p17,p20,'2','97777','2') // Name: DividePayload
+		and generator:ChineseRemainderTheorem.MergePayload(p24,p40,'2') // Name: MergePayload
+
+

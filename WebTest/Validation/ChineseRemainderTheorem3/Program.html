@@ -9,19 +9,19 @@
 		<script src="/processes/ChineseRemainderTheorem.js"></script>
 		<script src="/protocols/MapReduce.js"></script>
 
-		<script src="Protocol_d20161214_t174107_667_MapReduce.js"></script>
+		<script src="Protocol_d20170103_t193219_508_MapReduce.js"></script>
 
-		<script src="WorkerClient_d20161214_t174107_706_Power.js"></script>
-		<script src="WorkerClient_d20161214_t174107_727_Power.js"></script>
-		<script src="WorkerClient_d20161214_t174107_746_DividePayload.js"></script>
-		<script src="WorkerClient_d20161214_t174107_754_MergePayload.js"></script>
-		<script src="WorkerClient_d20161214_t174107_762_Power.js"></script>
+		<script src="WorkerClient_d20170103_t193219_580_Compute.js"></script>
+		<script src="WorkerClient_d20170103_t193219_555_Compute.js"></script>
+		<script src="WorkerClient_d20170103_t193219_594_DividePayload.js"></script>
+		<script src="WorkerClient_d20170103_t193219_567_Compute.js"></script>
+		<script src="WorkerClient_d20170103_t193219_602_MergePayload.js"></script>
 
-		<script src="Main_ChineseRemainderTheorem3_20161214174107.js"></script>
+		<script src="Main_ChineseRemainderTheoremN.js"></script>
 
 		<script type="text/javascript">
 
-		var main = new Main_ChineseRemainderTheorem3_20161214174107();
+		var main = new Main_ChineseRemainderTheoremN();
 
 		function putValue(portName) {
 			var port = main[portName];
@@ -47,28 +47,14 @@
 		}
 
 	
-		main.p14$1.addListener("putting", (port, data) => {
-			var log = document.getElementById('logp14$1');
+		main.p17$1.addListener("putting", (port, data) => {
+			var log = document.getElementById('logp17$1');
 			if (log) {
 				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
 			}
 		});	
-		main.p14$1.addListener("putted", (port, data) => {
-			var log = document.getElementById('logp14$1');
-			if (log) {
-		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
-		    }
-		});
-
-	
-		main.p18$1.addListener("putting", (port, data) => {
-			var log = document.getElementById('logp18$1');
-			if (log) {
-				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
-			}
-		});	
-		main.p18$1.addListener("putted", (port, data) => {
-			var log = document.getElementById('logp18$1');
+		main.p17$1.addListener("putted", (port, data) => {
+			var log = document.getElementById('logp17$1');
 			if (log) {
 		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
 		    }
@@ -89,28 +75,42 @@
 		});
 
 	
-		main.p28$1.addListener("putting", (port, data) => {
-			var log = document.getElementById('logp28$1');
+		main.p6p13$1$1.addListener("putting", (port, data) => {
+			var log = document.getElementById('logp6p13$1$1');
 			if (log) {
 				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
 			}
 		});	
-		main.p28$1.addListener("putted", (port, data) => {
-			var log = document.getElementById('logp28$1');
+		main.p6p13$1$1.addListener("putted", (port, data) => {
+			var log = document.getElementById('logp6p13$1$1');
 			if (log) {
 		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
 		    }
 		});
 
 	
-		main.p6$1.addListener("putting", (port, data) => {
-			var log = document.getElementById('logp6$1');
+		main.p6p13$1$2.addListener("putting", (port, data) => {
+			var log = document.getElementById('logp6p13$1$2');
 			if (log) {
 				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
 			}
 		});	
-		main.p6$1.addListener("putted", (port, data) => {
-			var log = document.getElementById('logp6$1');
+		main.p6p13$1$2.addListener("putted", (port, data) => {
+			var log = document.getElementById('logp6p13$1$2');
+			if (log) {
+		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
+		    }
+		});
+
+	
+		main.p6p13$1$3.addListener("putting", (port, data) => {
+			var log = document.getElementById('logp6p13$1$3');
+			if (log) {
+				log.innerHTML += '<BR />putting ' + port.name + ': ' + stringify(data) + '...';
+			}
+		});	
+		main.p6p13$1$3.addListener("putted", (port, data) => {
+			var log = document.getElementById('logp6p13$1$3');
 			if (log) {
 		    	log.innerHTML += '<BR />putted ' + port.name + ': ' + stringify(data) + '!';
 		    }
@@ -132,70 +132,70 @@
 
 
 		
-		main.p11$1.addListener("getting", (port) => {
-			var log = document.getElementById('logp11$1');
+		main.p14$1.addListener("getting", (port) => {
+			var log = document.getElementById('logp14$1');
 			if (log) {
 				log.innerHTML += '<BR />getting ' + port.name;
 			}
 		});	
-		main.p11$1.addListener("getted", (port, data) => {
-			var log = document.getElementById('logp11$1');
+		main.p14$1.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp14$1');
 			if (log) {
 		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
 		    }
 		});		
 
 		
-		main.p15$1.addListener("getting", (port) => {
-			var log = document.getElementById('logp15$1');
+		main.p21$1.addListener("getting", (port) => {
+			var log = document.getElementById('logp21$1');
 			if (log) {
 				log.innerHTML += '<BR />getting ' + port.name;
 			}
 		});	
-		main.p15$1.addListener("getted", (port, data) => {
-			var log = document.getElementById('logp15$1');
+		main.p21$1.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp21$1');
 			if (log) {
 		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
 		    }
 		});		
 
 		
-		main.p23$1.addListener("getting", (port) => {
-			var log = document.getElementById('logp23$1');
+		main.p3p10$1$1.addListener("getting", (port) => {
+			var log = document.getElementById('logp3p10$1$1');
 			if (log) {
 				log.innerHTML += '<BR />getting ' + port.name;
 			}
 		});	
-		main.p23$1.addListener("getted", (port, data) => {
-			var log = document.getElementById('logp23$1');
+		main.p3p10$1$1.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp3p10$1$1');
 			if (log) {
 		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
 		    }
 		});		
 
 		
-		main.p25$1.addListener("getting", (port) => {
-			var log = document.getElementById('logp25$1');
+		main.p3p10$1$2.addListener("getting", (port) => {
+			var log = document.getElementById('logp3p10$1$2');
 			if (log) {
 				log.innerHTML += '<BR />getting ' + port.name;
 			}
 		});	
-		main.p25$1.addListener("getted", (port, data) => {
-			var log = document.getElementById('logp25$1');
+		main.p3p10$1$2.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp3p10$1$2');
 			if (log) {
 		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
 		    }
 		});		
 
 		
-		main.p3$1.addListener("getting", (port) => {
-			var log = document.getElementById('logp3$1');
+		main.p3p10$1$3.addListener("getting", (port) => {
+			var log = document.getElementById('logp3p10$1$3');
 			if (log) {
 				log.innerHTML += '<BR />getting ' + port.name;
 			}
 		});	
-		main.p3$1.addListener("getted", (port, data) => {
-			var log = document.getElementById('logp3$1');
+		main.p3p10$1$3.addListener("getted", (port, data) => {
+			var log = document.getElementById('logp3p10$1$3');
 			if (log) {
 		    	log.innerHTML += '<BR />getted ' + port.name + ': ' + stringify(data) +'!';
 		    }
@@ -254,20 +254,11 @@
 
 		
 	<div class="portBox" >
-        <span class="portName">p14$1</span>
-        <input type="text" id="inputp14$1" />
-        <button onclick="putValue('p14$1')">Put</button>
-        <span class="portLogTitle">Log of port p14$1:</span>
-        <div id="logp14$1" class="portLog"></div>
-    </div>
-
-		
-	<div class="portBox" >
-        <span class="portName">p18$1</span>
-        <input type="text" id="inputp18$1" />
-        <button onclick="putValue('p18$1')">Put</button>
-        <span class="portLogTitle">Log of port p18$1:</span>
-        <div id="logp18$1" class="portLog"></div>
+        <span class="portName">p17$1</span>
+        <input type="text" id="inputp17$1" />
+        <button onclick="putValue('p17$1')">Put</button>
+        <span class="portLogTitle">Log of port p17$1:</span>
+        <div id="logp17$1" class="portLog"></div>
     </div>
 
 		
@@ -281,20 +272,29 @@
 
 		
 	<div class="portBox" >
-        <span class="portName">p28$1</span>
-        <input type="text" id="inputp28$1" />
-        <button onclick="putValue('p28$1')">Put</button>
-        <span class="portLogTitle">Log of port p28$1:</span>
-        <div id="logp28$1" class="portLog"></div>
+        <span class="portName">p6p13$1$1</span>
+        <input type="text" id="inputp6p13$1$1" />
+        <button onclick="putValue('p6p13$1$1')">Put</button>
+        <span class="portLogTitle">Log of port p6p13$1$1:</span>
+        <div id="logp6p13$1$1" class="portLog"></div>
     </div>
 
 		
 	<div class="portBox" >
-        <span class="portName">p6$1</span>
-        <input type="text" id="inputp6$1" />
-        <button onclick="putValue('p6$1')">Put</button>
-        <span class="portLogTitle">Log of port p6$1:</span>
-        <div id="logp6$1" class="portLog"></div>
+        <span class="portName">p6p13$1$2</span>
+        <input type="text" id="inputp6p13$1$2" />
+        <button onclick="putValue('p6p13$1$2')">Put</button>
+        <span class="portLogTitle">Log of port p6p13$1$2:</span>
+        <div id="logp6p13$1$2" class="portLog"></div>
+    </div>
+
+		
+	<div class="portBox" >
+        <span class="portName">p6p13$1$3</span>
+        <input type="text" id="inputp6p13$1$3" />
+        <button onclick="putValue('p6p13$1$3')">Put</button>
+        <span class="portLogTitle">Log of port p6p13$1$3:</span>
+        <div id="logp6p13$1$3" class="portLog"></div>
     </div>
 
 		
@@ -309,47 +309,47 @@
 
 		
 	<div class="portBox">
-        <span class="portName">p11$1</span>
-    	<input type="text" id="outputp11$1" />
-        <button onclick="getValue('p11$1')">Get</button>
-        <span class="portLogTitle">Log of port p11$1:</span>
-        <div id="logp11$1" class="portLog"></div>
+        <span class="portName">p14$1</span>
+    	<input type="text" id="outputp14$1" />
+        <button onclick="getValue('p14$1')">Get</button>
+        <span class="portLogTitle">Log of port p14$1:</span>
+        <div id="logp14$1" class="portLog"></div>
      </div>
 
 		
 	<div class="portBox">
-        <span class="portName">p15$1</span>
-    	<input type="text" id="outputp15$1" />
-        <button onclick="getValue('p15$1')">Get</button>
-        <span class="portLogTitle">Log of port p15$1:</span>
-        <div id="logp15$1" class="portLog"></div>
+        <span class="portName">p21$1</span>
+    	<input type="text" id="outputp21$1" />
+        <button onclick="getValue('p21$1')">Get</button>
+        <span class="portLogTitle">Log of port p21$1:</span>
+        <div id="logp21$1" class="portLog"></div>
      </div>
 
 		
 	<div class="portBox">
-        <span class="portName">p23$1</span>
-    	<input type="text" id="outputp23$1" />
-        <button onclick="getValue('p23$1')">Get</button>
-        <span class="portLogTitle">Log of port p23$1:</span>
-        <div id="logp23$1" class="portLog"></div>
+        <span class="portName">p3p10$1$1</span>
+    	<input type="text" id="outputp3p10$1$1" />
+        <button onclick="getValue('p3p10$1$1')">Get</button>
+        <span class="portLogTitle">Log of port p3p10$1$1:</span>
+        <div id="logp3p10$1$1" class="portLog"></div>
      </div>
 
 		
 	<div class="portBox">
-        <span class="portName">p25$1</span>
-    	<input type="text" id="outputp25$1" />
-        <button onclick="getValue('p25$1')">Get</button>
-        <span class="portLogTitle">Log of port p25$1:</span>
-        <div id="logp25$1" class="portLog"></div>
+        <span class="portName">p3p10$1$2</span>
+    	<input type="text" id="outputp3p10$1$2" />
+        <button onclick="getValue('p3p10$1$2')">Get</button>
+        <span class="portLogTitle">Log of port p3p10$1$2:</span>
+        <div id="logp3p10$1$2" class="portLog"></div>
      </div>
 
 		
 	<div class="portBox">
-        <span class="portName">p3$1</span>
-    	<input type="text" id="outputp3$1" />
-        <button onclick="getValue('p3$1')">Get</button>
-        <span class="portLogTitle">Log of port p3$1:</span>
-        <div id="logp3$1" class="portLog"></div>
+        <span class="portName">p3p10$1$3</span>
+    	<input type="text" id="outputp3p10$1$3" />
+        <button onclick="getValue('p3p10$1$3')">Get</button>
+        <span class="portLogTitle">Log of port p3p10$1$3:</span>
+        <div id="logp3p10$1$3" class="portLog"></div>
      </div>
 
 		

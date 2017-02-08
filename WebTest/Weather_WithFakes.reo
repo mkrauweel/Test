@@ -112,6 +112,12 @@
     <children xmi:type="notation:Shape" xmi:id="_N9gz4LGJEeWYHPrLae0EBA" type="1004" element="_N9Xp8LGJEeWYHPrLae0EBA" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_N9gz4rGJEeWYHPrLae0EBA" type="4007"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_N9gz47GJEeWYHPrLae0EBA" type="5004">
+        <children xmi:type="notation:Node" xmi:id="_ST7-QNgFEeasd4msdWYukA" type="2004" element="_X8DwULAkEeaXSdgznjhjdg">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ST7-QdgFEeasd4msdWYukA"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ST-agNgFEeasd4msdWYukA" type="2004" element="_by1NkLAkEeaXSdgznjhjdg">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ST-agdgFEeasd4msdWYukA"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_N9gz5LGJEeWYHPrLae0EBA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_N9gz5bGJEeWYHPrLae0EBA"/>
       </children>
@@ -132,6 +138,9 @@
     <children xmi:type="notation:Shape" xmi:id="_N9gz87GJEeWYHPrLae0EBA" type="1004" element="_N9gz8LGJEeWYHPrLae0EBA" fontName="Segoe UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_N9gz9bGJEeWYHPrLae0EBA" type="4007"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_N9gz9rGJEeWYHPrLae0EBA" type="5004">
+        <children xmi:type="notation:Node" xmi:id="_ST_BkNgFEeasd4msdWYukA" type="2004" element="_mvuJECaUEea8SvhVCuYokw">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ST_BkdgFEeasd4msdWYukA"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_N9gz97GJEeWYHPrLae0EBA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_N9gz-LGJEeWYHPrLae0EBA"/>
       </children>

@@ -1,0 +1,31 @@
+include("platform:/plugin/nl.cwi.pr/src/nl/cwi/pr/autom/libr/Reo.pr")
+
+MapReduce(power,p2,p6,p13,p17;result,p3,p10,p14,p21) = 
+	Node([power];[p1]) // Name: power
+	mult Node([p2];[result]) // Name: result
+	mult Node([p4];[p3]) // Name: compute0In
+	mult Node([p6];[p5]) // Name: compute0Out
+	mult XNode([p9];[p7,p8]) // Name: dividePayload
+	mult Node([p11];[p10]) // Name: compute1In
+	mult Node([p13];[p12]) // Name: power1Out
+	mult Node([p15];[p14]) // Name: payloadIn
+	mult Node([p17];[p16]) // Name: payloadOut
+	mult Node([p19,p20];[p18]) // Name: mergePayload
+	mult Node([p22];[p21]) // Name: mergeIn
+	mult Sync(p1;p15)
+	mult Sync(p16;p9)
+	mult Sync(p5;p19)
+	mult Sync(p12;p20)
+	mult Sync(p7;p11)
+	mult Sync(p18;p22)
+	mult Sync(p8;p4)
+
+main =
+		MapReduce(power,p2,p6,p13,p17;result,p3,p10,p14,p21)
+	among
+		ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js(p3,p6,'0') // Name: Compute0
+		and ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js(p10,p13,'1') // Name: Compute1
+		and generator:ChineseRemainderTheorem.DividePayload(p14,p17,'2','97777','2') // Name: DividePayload
+		and generator:ChineseRemainderTheorem.MergePayload(p21,p2,'2') // Name: MergePayload
+
+

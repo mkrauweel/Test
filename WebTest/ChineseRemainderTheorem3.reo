@@ -53,12 +53,12 @@
         <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_l2X8g7GMEeaJe50J5X0xaA" node="_pIK3AE58EeaCYLad4_Rgqg"/>
       </primitives>
     </connectors>
-    <components xmi:type="components:SourceCode" xmi:id="_mNRpMEeXEeav3ajArVIQXw" name="Compute0" originialName="ChineseRemainderTheorem.Power@/processes/ChineseRemainderTheorem.js">
+    <components xmi:type="components:SourceCode" xmi:id="_mNRpMEeXEeav3ajArVIQXw" name="Compute0" originialName="ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js">
       <properties xmi:type="reo:Property" xmi:id="_ndLHkEhXEea4qvBHy2LuNw" key="index" value="0" type=""/>
       <sourceEnds xmi:type="reo:ParameterSourceEnd" xmi:id="_v16XYEeXEeav3ajArVIQXw" name="pIn" node="_giLuoEeXEeav3ajArVIQXw"/>
       <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_yquoYEeXEeav3ajArVIQXw" name="pOut" node="_icXjYEeXEeav3ajArVIQXw"/>
     </components>
-    <components xmi:type="components:SourceCode" xmi:id="_DTF-MEhbEea4qvBHy2LuNw" name="Compute1" originialName="ChineseRemainderTheorem.Power@/processes/ChineseRemainderTheorem.js">
+    <components xmi:type="components:SourceCode" xmi:id="_DTF-MEhbEea4qvBHy2LuNw" name="Compute1" originialName="ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js">
       <properties xmi:type="reo:Property" xmi:id="_I0cG4EhbEea4qvBHy2LuNw" key="index" value="1"/>
       <sourceEnds xmi:type="reo:ParameterSourceEnd" xmi:id="_D1jyEEhbEea4qvBHy2LuNw" name="pIn" node="_9pq3kEhaEea4qvBHy2LuNw"/>
       <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_FJQOkEhbEea4qvBHy2LuNw" name="pOut" node="_OJPoYEhbEea4qvBHy2LuNw"/>
@@ -75,7 +75,7 @@
       <sourceEnds xmi:type="reo:ParameterSourceEnd" xmi:id="_mEecgE58EeaCYLad4_Rgqg" node="_2QHycE6BEeaCYLad4_Rgqg"/>
       <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_mv9pgE58EeaCYLad4_Rgqg" node="_d2UlUEeXEeav3ajArVIQXw"/>
     </components>
-    <components xmi:type="components:SourceCode" xmi:id="_ay5oALGMEeaJe50J5X0xaA" name="Compute2" originialName="ChineseRemainderTheorem.Power@/processes/ChineseRemainderTheorem.js">
+    <components xmi:type="components:SourceCode" xmi:id="_ay5oALGMEeaJe50J5X0xaA" name="Compute2" originialName="ChineseRemainderTheorem.Compute@/processes/ChineseRemainderTheorem.js">
       <properties xmi:type="reo:Property" xmi:id="_bb798LGMEeaJe50J5X0xaA" key="index" value="2"/>
       <sourceEnds xmi:type="reo:ParameterSourceEnd" xmi:id="_c15agLGMEeaJe50J5X0xaA" name="pIn" node="_gbY6gLGMEeaJe50J5X0xaA"/>
       <sinkEnds xmi:type="reo:ParameterSinkEnd" xmi:id="_eLulALGMEeaJe50J5X0xaA" name="pOut" node="_huYzcLGMEeaJe50J5X0xaA"/>

@@ -45,7 +45,7 @@ $(function(){
 
     var suportWebWorkers = function() {
         try {
-            (new Worker("assets/js/javascript-webworkers-v1.4.0.js")).terminate();
+           // (new Worker("assets/js/javascript-webworkers-v1.4.0.js")).terminate();
             return true;
         } catch (e) {
             return false;
@@ -66,6 +66,7 @@ $(function(){
         min: 1,
         max: 24,
         value: 3,
+        disabled: true,
         stop : function() {
             refreshValueWorkers("#webWorkersNumber", "#slider1");
             $("#webWorkersNumber2").html($("#slider1").slider('option', 'value')+" thread"+($("#slider1").slider('option', 'value') == 1 ? "" : "s"));

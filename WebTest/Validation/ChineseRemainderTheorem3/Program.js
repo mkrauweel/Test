@@ -14,8 +14,8 @@
 	}
 
 
-	var Main_ChineseRemainderTheorem3_20161214174107 = require('./Main_ChineseRemainderTheorem3_20161214174107');
-	var main = new Main_ChineseRemainderTheorem3_20161214174107();
+	var Main_ChineseRemainderTheoremN = require('./Main_ChineseRemainderTheoremN');
+	var main = new Main_ChineseRemainderTheoremN();
 
 	function putValue(portName, value) {
 		var port = main[portName];
@@ -70,18 +70,10 @@
 
 	//Listener for putting and putted events of input ports
 	
-	main.p14$1.addListener("putting", (port, data) => {
+	main.p17$1.addListener("putting", (port, data) => {
 		console.log('putting ' + port.name + ': ' + stringify(data) + '...');
 	});	
-	main.p14$1.addListener("putted", (port, data) => {
-	    console.log('putted ' + port.name + ': ' + stringify(data) + '!');
-	});
-
-	
-	main.p18$1.addListener("putting", (port, data) => {
-		console.log('putting ' + port.name + ': ' + stringify(data) + '...');
-	});	
-	main.p18$1.addListener("putted", (port, data) => {
+	main.p17$1.addListener("putted", (port, data) => {
 	    console.log('putted ' + port.name + ': ' + stringify(data) + '!');
 	});
 
@@ -94,18 +86,26 @@
 	});
 
 	
-	main.p28$1.addListener("putting", (port, data) => {
+	main.p6p13$1$1.addListener("putting", (port, data) => {
 		console.log('putting ' + port.name + ': ' + stringify(data) + '...');
 	});	
-	main.p28$1.addListener("putted", (port, data) => {
+	main.p6p13$1$1.addListener("putted", (port, data) => {
 	    console.log('putted ' + port.name + ': ' + stringify(data) + '!');
 	});
 
 	
-	main.p6$1.addListener("putting", (port, data) => {
+	main.p6p13$1$2.addListener("putting", (port, data) => {
 		console.log('putting ' + port.name + ': ' + stringify(data) + '...');
 	});	
-	main.p6$1.addListener("putted", (port, data) => {
+	main.p6p13$1$2.addListener("putted", (port, data) => {
+	    console.log('putted ' + port.name + ': ' + stringify(data) + '!');
+	});
+
+	
+	main.p6p13$1$3.addListener("putting", (port, data) => {
+		console.log('putting ' + port.name + ': ' + stringify(data) + '...');
+	});	
+	main.p6p13$1$3.addListener("putted", (port, data) => {
 	    console.log('putted ' + port.name + ': ' + stringify(data) + '!');
 	});
 
@@ -120,42 +120,42 @@
 
 	//Listeners for getting and getted events of input ports
 		
-	main.p11$1.addListener("getting", (port) => {
+	main.p14$1.addListener("getting", (port) => {
 		console.log('getting ' + port.name);
 	});	
-	main.p11$1.addListener("getted", (port, data) => {
+	main.p14$1.addListener("getted", (port, data) => {
 		console.log('getted ' + port.name + ': ' + stringify(data) +'!');
 	});		
 
 		
-	main.p15$1.addListener("getting", (port) => {
+	main.p21$1.addListener("getting", (port) => {
 		console.log('getting ' + port.name);
 	});	
-	main.p15$1.addListener("getted", (port, data) => {
+	main.p21$1.addListener("getted", (port, data) => {
 		console.log('getted ' + port.name + ': ' + stringify(data) +'!');
 	});		
 
 		
-	main.p23$1.addListener("getting", (port) => {
+	main.p3p10$1$1.addListener("getting", (port) => {
 		console.log('getting ' + port.name);
 	});	
-	main.p23$1.addListener("getted", (port, data) => {
+	main.p3p10$1$1.addListener("getted", (port, data) => {
 		console.log('getted ' + port.name + ': ' + stringify(data) +'!');
 	});		
 
 		
-	main.p25$1.addListener("getting", (port) => {
+	main.p3p10$1$2.addListener("getting", (port) => {
 		console.log('getting ' + port.name);
 	});	
-	main.p25$1.addListener("getted", (port, data) => {
+	main.p3p10$1$2.addListener("getted", (port, data) => {
 		console.log('getted ' + port.name + ': ' + stringify(data) +'!');
 	});		
 
 		
-	main.p3$1.addListener("getting", (port) => {
+	main.p3p10$1$3.addListener("getting", (port) => {
 		console.log('getting ' + port.name);
 	});	
-	main.p3$1.addListener("getted", (port, data) => {
+	main.p3p10$1$3.addListener("getted", (port, data) => {
 		console.log('getted ' + port.name + ': ' + stringify(data) +'!');
 	});		
 
